@@ -239,6 +239,36 @@
   value: null
 ↓coordinates [mobile.components.UICompVariable-1618909223141]: 
   value: null
+↓FabList [mobile.components.UIDynamicElement-1618926244078]: 
+  beanData: '{"ionBean":"FabList","side":"plain:top"}'
+  isEnabled: false
+  tagName: ion-fab-list
+  ↓FabButton [mobile.components.UIDynamicElement-1618921518422]: 
+    beanData: '{"ionBean":"FabButton"}'
+    tagName: button
+    ↓Event [mobile.components.UIControlEvent-1618922554308]: 
+      isEnabled: false
+      ↓SetGlobal [mobile.components.UIDynamicAction-1618922566725]: 
+        beanData: |
+          '{
+           "ionBean": "SetGlobalAction",
+           "Property": "plain:showListView",
+           "Value": "script:(this.global.showListView) ? false : true"
+          }'
+      ↓Toast [mobile.components.UIDynamicAction-1618926122687]: 
+        beanData: '{"ionBean":"ToastAction","message":"script:this.global.showMap"}'
+  ↓Attr [mobile.components.UIAttribute-1618928954906]: 
+    attrName: bottom
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:
+  ↓Attr1 [mobile.components.UIAttribute-1618928974903]: 
+    attrName: right
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:
 ↓Directive [mobile.components.UIControlDirective-1618922429367]: 
   directiveExpression: this.global.showFabButton
   directiveName: If
@@ -252,9 +282,11 @@
           - com.twinsoft.convertigo.beans.common.FormatedContent: 
             →: |
               '	position: relative;
-              display: flex;
-              flex-direction: row-reverse;
-              top: 80%;
+              	display: flex;
+              	flex-direction: row-reverse;
+              	top: 80%;
+              	right: 0.15%;
+              	z-index: 9999;
               '
     ↓FabButton [mobile.components.UIDynamicElement-1618926707816]: 
       beanData: '{"ionBean":"FabButton"}'
@@ -285,44 +317,6 @@
       ↓Icon [mobile.components.UIDynamicElement-1618929846365]: 
         beanData: '{"ionBean":"Icon","IconName":"script:(this.global.showMap) ? ''list'' : ''map''"}'
         tagName: ion-icon
-  ↓FabList [mobile.components.UIDynamicElement-1618926244078]: 
-    beanData: '{"ionBean":"FabList","side":"plain:top"}'
-    isEnabled: false
-    tagName: ion-fab-list
-    ↓FabButton [mobile.components.UIDynamicElement-1618921518422]: 
-      beanData: '{"ionBean":"FabButton"}'
-      tagName: button
-      ↓Event [mobile.components.UIControlEvent-1618922554308]: 
-        isEnabled: false
-        ↓SetGlobal [mobile.components.UIDynamicAction-1618922566725]: 
-          beanData: |
-            '{
-             "ionBean": "SetGlobalAction",
-             "Property": "plain:showListView",
-             "Value": "script:(this.global.showListView) ? false : true"
-            }'
-        ↓Toast [mobile.components.UIDynamicAction-1618926122687]: 
-          beanData: '{"ionBean":"ToastAction","message":"script:this.global.showMap"}'
-      ↓Style [mobile.components.UIStyle-1618926534870]: 
-        styleContent: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-            - com.twinsoft.convertigo.beans.common.FormatedContent: 
-              →: |
-                '	z-index: 9999 !important;
-                '
-    ↓Attr [mobile.components.UIAttribute-1618928954906]: 
-      attrName: bottom
-      attrValue: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: plain:
-    ↓Attr1 [mobile.components.UIAttribute-1618928974903]: 
-      attrName: right
-      attrValue: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: plain:
 ↓Directive2 [mobile.components.UIControlDirective-1618922639663]: 
   directiveExpression: this.global.showListView
   directiveName: If
