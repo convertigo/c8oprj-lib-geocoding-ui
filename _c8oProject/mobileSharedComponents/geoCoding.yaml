@@ -1,5 +1,6 @@
 ↓DivGeoCoding [mobile.components.UIDynamicElement-1608651712226]: 
   beanData: '{"ionBean":"DivTag"}'
+  identifier: initFakeEvent
   tagName: div
   ↓FormItem [mobile.components.UIDynamicElement-1608651712241]: 
     beanData: '{"ionBean":"FormItem"}'
@@ -20,7 +21,7 @@
     directiveSource: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-        - MobileSmartSourceType: script:this.global.bouding != undefined
+        - MobileSmartSourceType: script:this.global.bouding != undefined && params1608651712223.showFields != false
     ↓Div [mobile.components.UIDynamicElement-1610189746587]: 
       beanData: '{"ionBean":"DivTag"}'
       tagName: div
@@ -57,6 +58,44 @@
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: 'script:''longitude:  '' + this.global.bouding.bottomRight?.lon'
+  ↓Event [mobile.components.UIControlEvent-1618927792631]: 
+    attrName: (blur)
+    eventName: (blur)
+    ↓SetGlobal1 [mobile.components.UIDynamicAction-1618925795693]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showAddress",
+         "Value": "script:params1608651712223.showAddress"
+        }'
+    ↓SetGlobal11 [mobile.components.UIDynamicAction-1618925815418]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showMap",
+         "Value": "script:params1608651712223.showMap"
+        }'
+    ↓SetGlobal12 [mobile.components.UIDynamicAction-1618925827493]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showMarkers",
+         "Value": "script:params1608651712223.showMarkers"
+        }'
+    ↓SetGlobal13 [mobile.components.UIDynamicAction-1618925839250]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showFields",
+         "Value": "script:params1608651712223.showFields"
+        }'
+    ↓SetGlobal14 [mobile.components.UIDynamicAction-1618925850237]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showFabButton",
+         "Value": "script:params1608651712223.showFabButton"
+        }'
 ↓PageEvent [mobile.components.UIPageEvent-1608651712253]: 
   ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1609932476367]: 
     beanData: '{"ionBean":"InvokeAction"}'
@@ -166,5 +205,235 @@
            "Property": "plain:bouding",
            "Value": "script:parent.out"
           }'
+  ↓SetGlobal [mobile.components.UIDynamicAction-1618923200546]: 
+    beanData: |
+      '{
+       "ionBean": "SetGlobalAction",
+       "Property": "plain:showListView",
+       "Value": "script:false"
+      }'
+  ↓initFakeEvent [mobile.components.UICustomAction-1618927514445]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+            		setTimeout(()=> {
+                            page["initFakeEvent"].nativeElement.dispatchEvent(new MouseEvent(''blur'', {
+                                view: window,
+                                bubbles: true,
+                                cancelable: true
+                            }));
+                            // page.c8o.log.debug(''[MB] *** click done :'' );
+                        }, 0)
+            		resolve();
+            '
 ↓showAddress [mobile.components.UICompVariable-1608719512003]: 
-  value: true
+  value: NULL
+↓showMap [mobile.components.UICompVariable-1618909193811]: 
+  value: null
+↓showMarkers [mobile.components.UICompVariable-1618915352984]: 
+  value: null
+↓showFields [mobile.components.UICompVariable-1618909203036]: 
+  value: null
+↓coordinates [mobile.components.UICompVariable-1618909223141]: 
+  value: null
+↓Directive [mobile.components.UIControlDirective-1618922429367]: 
+  directiveExpression: this.global.showFabButton
+  directiveName: If
+  ↓Div [mobile.components.UIDynamicElement-1618921678604]: 
+    beanData: '{"ionBean":"DivTag"}'
+    tagName: div
+    ↓Style [mobile.components.UIStyle-1618921576614]: 
+      styleContent: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '	position: relative;
+              	top: 85%;
+              	left: 96%;
+              	z-index: 9999;
+              '
+    ↓FabButton [mobile.components.UIDynamicElement-1618926707816]: 
+      beanData: '{"ionBean":"FabButton"}'
+      tagName: button
+      ↓Event [mobile.components.UIControlEvent-1618926707819]: 
+        ↓SetGlobal [mobile.components.UIDynamicAction-1618926707822]: 
+          beanData: |
+            '{
+             "ionBean": "SetGlobalAction",
+             "Property": "plain:showListView",
+             "Value": "script:(this.global.showListView) ? false : true"
+            }'
+        ↓showMaps [mobile.components.UIDynamicAction-1618927903313]: 
+          beanData: |
+            '{
+             "ionBean": "SetGlobalAction",
+             "Property": "plain:showMap",
+             "Value": "script:(this.global.showMap) ? false : true"
+            }'
+      ↓Style [mobile.components.UIStyle-1618926707828]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	z-index: 9999 !important;
+                '
+      ↓Icon [mobile.components.UIDynamicElement-1618929846365]: 
+        beanData: '{"ionBean":"Icon","IconName":"script:(this.global.showMap) ? ''list'' : ''map''"}'
+        tagName: ion-icon
+  ↓FabList [mobile.components.UIDynamicElement-1618926244078]: 
+    beanData: '{"ionBean":"FabList","side":"plain:top"}'
+    isEnabled: false
+    tagName: ion-fab-list
+    ↓FabButton [mobile.components.UIDynamicElement-1618921518422]: 
+      beanData: '{"ionBean":"FabButton"}'
+      tagName: button
+      ↓Event [mobile.components.UIControlEvent-1618922554308]: 
+        isEnabled: false
+        ↓SetGlobal [mobile.components.UIDynamicAction-1618922566725]: 
+          beanData: |
+            '{
+             "ionBean": "SetGlobalAction",
+             "Property": "plain:showListView",
+             "Value": "script:(this.global.showListView) ? false : true"
+            }'
+        ↓Toast [mobile.components.UIDynamicAction-1618926122687]: 
+          beanData: '{"ionBean":"ToastAction","message":"script:this.global.showMap"}'
+      ↓Style [mobile.components.UIStyle-1618926534870]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	z-index: 9999 !important;
+                '
+    ↓Attr [mobile.components.UIAttribute-1618928954906]: 
+      attrName: bottom
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:
+    ↓Attr1 [mobile.components.UIAttribute-1618928974903]: 
+      attrName: right
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:
+↓Directive2 [mobile.components.UIControlDirective-1618922639663]: 
+  directiveExpression: this.global.showListView
+  directiveName: If
+  ↓Div [mobile.components.UIDynamicElement-1618922699962]: 
+    beanData: '{"ionBean":"DivTag"}'
+    tagName: div
+    ↓ListContainer [mobile.components.UIDynamicElement-1618922734499]: 
+      beanData: '{"ionBean":"List"}'
+      tagName: ion-list
+      ↓Directive [mobile.components.UIControlDirective-1618922769591]: 
+        directiveItemName: item
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:params1608651712223.coordinates
+        ↓ListItem [mobile.components.UIDynamicElement-1618922818350]: 
+          beanData: '{"ionBean":"ListItem","ItemPosition":"plain:item-right"}'
+          tagName: ion-item
+          ↓H2 [mobile.components.UIDynamicElement-1618929904708]: 
+            beanData: '{"ionBean":"Heading2"}'
+            tagName: h2
+            ↓Text [mobile.components.UIText-1618922928050]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui","input":"","model":{"data":[{"priority":1618922769591}],"path":"","prefix":"","suffix":".infos.title","custom":"","useCustom":false}}
+          ↓H4 [mobile.components.UIDynamicElement-1618929800178]: 
+            beanData: '{"ionBean":"Heading4"}'
+            tagName: h4
+            ↓Text [mobile.components.UIText-1618929813467]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui","input":"","model":{"data":[{"priority":1618922769591}],"path":"","prefix":"","suffix":".infos.description","custom":"","useCustom":false}}
+          ↓Icon [mobile.components.UIDynamicElement-1618922870952]: 
+            beanData: |
+              '{
+               "ionBean": "Icon",
+               "IconName": "plain:home",
+               "ItemPosition": "plain:item-right",
+               "RangeRight": "plain:range-right"
+              }'
+            tagName: ion-icon
+      ↓Style [mobile.components.UIStyle-1618923008267]: 
+        isEnabled: false
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	position: absolute;
+                	top: 100%;
+                	width: 98.299%;
+                	margin-left: 0.01%;
+                	z-index: 9998;
+                	border: 1px solid red;
+                '
+↓Directive1 [mobile.components.UIControlDirective-1618909261238]: 
+  directiveExpression: this.global.showMap
+  directiveName: If
+  ↓GoogleMap [mobile.components.UIDynamicElement-1618909178779]: 
+    beanData: |
+      '{
+       "ionBean": "GoogleMap",
+       "Latitude": "script:(router.sharedObject?.geoCoding !=undefined) ? router.sharedObject?.geoCoding?.latitude : ''48.6969459''",
+       "Longitude": "script:(router.sharedObject?.geoCoding !=undefined) ? router.sharedObject?.geoCoding?.longitude : ''2.1775981''"
+      }'
+    tagName: agm-map
+    ↓MapMarker [mobile.components.UIDynamicElement-1618909727430]: 
+      beanData: '{"ionBean":"MapMarker"}'
+      isEnabled: false
+      tagName: agm-marker
+    ↓Directive1 [mobile.components.UIControlDirective-1618915513862]: 
+      directiveExpression: == true
+      directiveName: If
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_Geocoding_ui","input":"","model":{"data":[{"priority":1608651712223}],"path":"?.showMarkers","prefix":"","suffix":"","custom":"","useCustom":false}}
+      ↓Directive [mobile.components.UIControlDirective-1618910037626]: 
+        directiveItemName: item
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:params1608651712223.coordinates
+        ↓MapMarker [mobile.components.UIDynamicElement-1618910159079]: 
+          beanData: |
+            '{
+             "ionBean": "MapMarker",
+             "Latitude": "source:{\"filter\":\"Iteration\",\"project\":\"lib_Geocoding_ui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1618910037626}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".latitude\",\"custom\":\"item1618910037626.latitude\",\"useCustom\":true}}",
+             "Longitude": "source:{\"filter\":\"Iteration\",\"project\":\"lib_Geocoding_ui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1618910037626}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".longitude\",\"custom\":\"item1618910037626.longitude\",\"useCustom\":true}}"
+            }'
+          tagName: agm-marker
+          ↓MapInfoWindow [mobile.components.UIDynamicElement-1618913973037]: 
+            beanData: '{"ionBean":"MapInfoWindow"}'
+            tagName: agm-info-window
+            ↓H2 [mobile.components.UIDynamicElement-1618914000310]: 
+              beanData: '{"ionBean":"Heading2"}'
+              tagName: h2
+              ↓Text [mobile.components.UIText-1618914007782]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui","input":"","model":{"data":[{"priority":1618910037626}],"path":"","prefix":"","suffix":".infos.title","custom":"","useCustom":false}}
+            ↓Paragraph [mobile.components.UIDynamicElement-1618916185640]: 
+              beanData: '{"ionBean":"Paragraph"}'
+              tagName: p
+              ↓Text [mobile.components.UIText-1618916419920]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui","input":"","model":{"data":[{"priority":1618910037626}],"path":"","prefix":"","suffix":".infos.description","custom":"","useCustom":false}}
+↓showFabButton [mobile.components.UICompVariable-1618921204778]: 
+  value: null

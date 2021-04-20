@@ -75,8 +75,50 @@ title: First page
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:true
+    ↓showMap [mobile.components.UIControlVariable-1618916999842]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓showMarkers [mobile.components.UIControlVariable-1618916999844]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓showFields [mobile.components.UIControlVariable-1618916999846]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:false
+    ↓coordinates [mobile.components.UIControlVariable-1618916999848]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
+              'script:[
+              {
+              ''latitude'': 48.8427388071459,''longitude'': 2.3264359454772876,''infos'': {
+                          ''title'': ''Burger King'',
+                          ''description'': ''La pire malbouffe du monde''
+                      }
+                  }, 
+                  {
+                      ''latitude'' : 48.85273611109959, 
+                      ''longitude'': 2.350017927136223, 
+                      ''infos'': {
+                          ''title'': ''Notre-Dame de Paris'',
+                          ''description'': ''Cathédrale en reconstruction (pour les JO normalement)''
+                      }
+                  }
+              ]'
+    ↓showFabButton [mobile.components.UIControlVariable-1618921294296]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
   ↓H11 [mobile.components.UIDynamicElement-1608721186346]: 
     beanData: '{"ionBean":"Heading1"}'
+    isEnabled: false
     tagName: h1
     ↓Text [mobile.components.UIText-1608721186349]: 
       textValue: 
@@ -84,6 +126,7 @@ title: First page
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:showAddress = false
   ↓UseSharedComponent1 [mobile.components.UIUseShared-1608721210969]: 
+    isEnabled: false
     sharedcomponent: lib_Geocoding_ui.MobileApplication.Application.geoCoding
     ↓showAddress [mobile.components.UIControlVariable-1608721210972]: 
       varValue: 
