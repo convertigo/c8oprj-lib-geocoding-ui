@@ -384,6 +384,7 @@
        "Latitude": "script:(router.sharedObject?.geoCoding !=undefined) ? router.sharedObject?.geoCoding?.latitude : ''48.6969459''",
        "Longitude": "script:(router.sharedObject?.geoCoding !=undefined) ? router.sharedObject?.geoCoding?.longitude : ''2.1775981''"
       }'
+    comment: to fix size, your parent element must have pixel values
     tagName: agm-map
     ↓MapMarker [mobile.components.UIDynamicElement-1618909727430]: 
       beanData: '{"ionBean":"MapMarker"}'
@@ -429,5 +430,14 @@
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui","input":"","model":{"data":[{"priority":1618910037626}],"path":"","prefix":"","suffix":".infos.description","custom":"","useCustom":false}}
+    ↓Style [mobile.components.UIStyle-1618934274145]: 
+      styleContent: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '	width: 100%;
+              	height: 100%;
+              '
 ↓showFabButton [mobile.components.UICompVariable-1618921204778]: 
   value: null
