@@ -252,9 +252,9 @@
           - com.twinsoft.convertigo.beans.common.FormatedContent: 
             →: |
               '	position: relative;
-              	top: 85%;
-              	left: 96%;
-              	z-index: 9999;
+              display: flex;
+              flex-direction: row-reverse;
+              top: 80%;
               '
     ↓FabButton [mobile.components.UIDynamicElement-1618926707816]: 
       beanData: '{"ionBean":"FabButton"}'
