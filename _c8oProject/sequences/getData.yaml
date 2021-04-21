@@ -1,0 +1,81 @@
+↓Read_CSV [steps.ReadCSVStep-1618934597533]: 
+  dataFile: '''.//dataset/services-sante.csv'''
+  titleLine: true
+↓Complex [steps.XMLComplexStep-1618992697706]: 
+  nodeName: services
+  ↓Iterator [steps.IteratorStep-1618992561838]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1618934597533
+          - java.lang.String: 
+            - ↑value: ./document/line
+    ↓Complex [steps.XMLComplexStep-1618992581501]: 
+      nodeName: service
+      ↓Element_1 [steps.XMLElementStep-1618992727748]: 
+        nodeName: ville
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1618992561838
+              - java.lang.String: 
+                - ↑value: ./libelle_de_commune/text()
+      ↓Element [steps.XMLElementStep-1618992651632]: 
+        nodeName: departement
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1618992561838
+              - java.lang.String: 
+                - ↑value: ./departement/text()
+      ↓jSource1 [steps.SimpleSourceStep-1618993070699]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1618992561838
+              - java.lang.String: 
+                - ↑value: ./geo_point_2d/text()
+        variableName: jCoordinates
+      ↓splitGeoPoint [steps.SimpleStep-1618992811261]: 
+        expression: |
+          //todo
+          var coordinates = jCoordinates.split(",")
+          
+          jLongitude = coordinates[0];
+          jLatitude = coordinates[1];
+      ↓Complex [steps.XMLComplexStep-1618992772251]: 
+        nodeName: coordinates
+        ↓jElement [steps.ElementStep-1618993088305]: 
+          expression: jLongitude
+          nodeName: longitude
+        ↓jElement_1 [steps.ElementStep-1618993126410]: 
+          expression: jLatitude
+          nodeName: latitude
+      ↓Element_2 [steps.XMLElementStep-1618993290192]: 
+        nodeName: centre_lutte_cancer
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1618992561838
+              - java.lang.String: 
+                - ↑value: ./centre_lutte_cancer/text()
+      ↓Element_3 [steps.XMLElementStep-1618993341082]: 
+        nodeName: maternite
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1618992561838
+              - java.lang.String: 
+                - ↑value: ./maternite/text()

@@ -1,9 +1,10 @@
-↑convertigo: 7.7.0.m006
+↑convertigo: 7.9.0.m006
 ↓lib_Geocoding_ui [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
   version: 1.0.3
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓getData [sequences.GenericSequence]: 🗏 sequences/getData.yaml
   ↓MobileBuilderTemplate [references.ProjectSchemaReference]: 
     comment: mobile builder template
     projectName: mobilebuilder_tpl_7_9_0=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_7_9_0.zip
